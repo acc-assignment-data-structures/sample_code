@@ -284,8 +284,7 @@ The terms "hash table" and "dictionary" are often used interchangeably in the co
 
 ## Tree Search
 
-- **Depth First Search**:
-- **Breadth-First Search** (Code + Logic): 
+- **Depth First Search**:(Code + Logic): 
   - **In-order Traversal**: Traverses left subtree, root, then right subtree. 
   - **Pre-order Traversal**: Traverses root, left subtree, then right subtree.
   - **Post-order Traversal**: Traverses left subtree, right subtree, then root.
