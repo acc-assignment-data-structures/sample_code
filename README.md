@@ -1,4 +1,4 @@
-# This is the Sample
+# Exam review
 
 ## Introduction
 - Testing framework [GoogleTest for C++](https://google.github.io/googletest/)
