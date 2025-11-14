@@ -141,7 +141,7 @@ int main() {
     // Expected Output: No
 
     std::cout << "Searching for value 3 in the list: " << (sll.search(3) ? "Found" : "Not Found") << std::endl;
-    // Expected Output: Found
+    // Expected Output: Not Found
 
     std::cout << "Searching for value 5 in the list: " << (sll.search(5) ? "Found" : "Not Found") << std::endl;
     // Expected Output: Not Found
