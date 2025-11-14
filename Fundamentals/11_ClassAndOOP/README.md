@@ -138,12 +138,43 @@ same class. This provides more access than `private` but maintains some encapsul
 **Base class access specification** (public, protected, or private) determines how members inherited from the base class
 appear in the derived class.
 
-* **`public` inheritance**: Public members of the base class become public in the derived class, and protected members
-  become protected.
-* **`protected` inheritance**: Public and protected members of the base class both become protected in the derived
-  class.
-* **`private` inheritance**: Public and protected members of the base class both become private in the derived class.
+public inheritance:
 
+Public members → remain public
+Protected members → remain protected
+Private members → inaccessible (not inherited in the accessible sense)
+
+protected inheritance:
+
+Public members → become protected
+Protected members → remain protected
+Private members → inaccessible
+
+private inheritance:
+
+Public members → become private
+Protected members → become private
+Private members → inaccessible
+
+```
+class Base {
+public:    int pub;
+protected: int prot;
+private:   int priv;  // Never accessible in derived
+};
+
+class PublicDerived : public Base {
+    // pub is public, prot is protected, priv is inaccessible
+};
+
+class ProtectedDerived : protected Base {
+    // pub is protected, prot is protected, priv is inaccessible
+};
+
+class PrivateDerived : private Base {
+    // pub is private, prot is private, priv is inaccessible
+};
+```
 ---
 
 ## 11.13 Constructors, Destructors, and Inheritance
